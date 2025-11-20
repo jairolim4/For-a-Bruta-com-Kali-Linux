@@ -39,6 +39,9 @@ O objetivo principal é demonstrar o uso de ataques de força bruta em ambiente 
         - Automação de Tentativas em Formulário Web (DVWA)
         - Inspeção do formulário
         - Testes automatizados de login
+        - Enumeração de usuários
+        - Teste de senha única aplicada a múltiplos usuários
+        - Identificação de reuso de senhas
       
    3. Ataque de Força Bruta – FTP
   
