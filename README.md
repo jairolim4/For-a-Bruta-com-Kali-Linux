@@ -1,4 +1,4 @@
-# For-a-Bruta-com-Kali-Linux
+# Força-Bruta-com-Kali-Linux
 
 Auditoria de Segurança com Ataques de Força Bruta
   FTP • HTTP • SMB usando Kali Linux e Medusa
